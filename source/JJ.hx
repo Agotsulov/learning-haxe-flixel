@@ -1,9 +1,14 @@
 package;
 
-import 
+import flixel.FlxSprite;
+import flixel.FlxObject;
 
 class JJ extends Entity
 {
+
+	public static inline var GRAVITY:Int = 620;
+	
+
 	public function new(X:Int, Y:Int, Play:PlayState)
 	{	
 		super(X,Y,Play);
@@ -12,40 +17,18 @@ class JJ extends Entity
 		animation.add("walking", [0, 1], 16, true);
 		animation.add("idle", [0]);
 		animation.add("jump", [1]);
-	
+		
+		acceleration.x = 100;
 	}
 
 
 	override public function update(elapsed:Float):Void
-	{
-		acceleration.x = 0; 
+	{ 
+		acceleration.y = GRAVITY;	
 	
-		
-		if (FlxG.keys.anyPressed([LEFT, A]))
-		{
-			flipX = true;
-			acceleration.x = -RUN_SPEED;
-		
-		}
-		
-		else if (FlxG.keys.anyPressed([RIGHT, D]))
-		{
-			flipX = false;				
-			acceleration.x = RUN_SPEED;
-		
-		}
-		
-		if (FlxG.keys.anyPressed([UP, W]) && isTouching(FlxObject.FLOOR))
-		{
-			velocity.y = -JUMP_SPEED;
-		}
-		else {
-			acceleration.y = GRAVITY;
-		}
-		
+		if(isTouching(FlxObject.LEFT))  acceleration.x = 100;
+		if(isTouching(FlxObject.RIGHT)) acceleration.x = -100;
 
-		
-		
 		if (velocity.x > 0 || velocity.x < 0) 
 		{ 
 			animation.play("walking"); 
@@ -64,7 +47,7 @@ class JJ extends Entity
 
 	}
 
-	override public function collide(o1:FlxObject,o2:FlxObject):Void
+	override public function collide(o1:Entity,o2:Entity):Void
 	{
 
 

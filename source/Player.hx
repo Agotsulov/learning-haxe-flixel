@@ -15,9 +15,9 @@ class Player extends Entity{
 	public static inline var JUMP_SPEED:Int = 250;
 	
 
-	public function new(X:Int,Y:Int,Play:PlayState)
+	public function new(X:Int,Y:Int,play:PlayState)
 	{
-		super(X,Y,Play);
+		super(X,Y,play,"Player");
 
 		loadGraphic("assets/image/player.png",true,16,16);
 
@@ -81,11 +81,10 @@ class Player extends Entity{
 
 	}
 
-	override public function collide(o1:FlxObject,o2:FlxObject):Void
+	override public function collide(o1:Entity,o2:Entity):Void
 	{
 		trace(this);
 		trace("Object 1 = " + o1);
-		o2.kill();
 		trace("Object 2 = " + o2);
 	}
 

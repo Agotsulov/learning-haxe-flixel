@@ -25,6 +25,8 @@ class MapLoader {
 	
 		actors = new FlxGroup();
 
+		actors.add(new Door(100,160,play,"assets/levels/map1/"));
+		
 		
 		var coords:Array<String>;
 		var entities:Array<String> = Assets.getText(foldername + "a.csv").split("\n");   
