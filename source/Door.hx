@@ -11,15 +11,12 @@ class Door extends Entity
 	{
 		super(X,Y,play);
 		this.folderpath = folderpath;
+		loadGraphic("assets/images/door.png",true,16,32);
 		this.setSize(16,32);
 	}
 
 	override public function collide(o1:Entity,o2:Entity):Void
 	{
-
-		trace(o1.name);
-
-		trace(o2.name);
 
 		if(o1.name == "Player") 
 		{

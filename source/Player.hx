@@ -7,29 +7,36 @@ import flixel.FlxG;
 import flixel.group.FlxGroup;
 import flixel.FlxObject;
 import flixel.FlxSprite;
+import flixel.text.FlxText;
 
 class Player extends Entity{
 
-	public static inline var RUN_SPEED:Int = 90;
+	public static inline var RUN_SPEED:Int = 100;
 	public static inline var GRAVITY:Int = 620;
 	public static inline var JUMP_SPEED:Int = 250;
-	
+	public static var HEALTH:Int = 100;
+	public var ability:Ability;
 
 	public function new(X:Int,Y:Int,play:PlayState)
 	{
 		super(X,Y,play,"Player");
 
-		loadGraphic("assets/image/player.png",true,16,16);
+		loadGraphic("assets/images/player.png",true,16,16);
 
 		animation.add("walking", [0, 1, 2, 3], 12, true);
 		animation.add("idle", [3]);
 		animation.add("jump", [2]);
 		
 		drag.set(RUN_SPEED * 8, RUN_SPEED * 8);
-		maxVelocity.set(RUN_SPEED, JUMP_SPEED);
+		maxVelocity.set(RUN_SPEED * 3, JUMP_SPEED * 3);
 		acceleration.y = GRAVITY;
 		setSize(12, 16);
-		offset.set(3, 4);
+
+		ability = new Ability(cast this,play);
+
+		health = HEALTH;
+
+		//offset.set(3, 4);
 		
 	}
 
@@ -60,7 +67,10 @@ class Player extends Entity{
 			acceleration.y = GRAVITY;
 		}
 		
-
+		if (FlxG.keys.anyPressed([Z]))
+		{				
+			ability.use(elapsed);
+		}
 		
 		
 		if (velocity.x > 0 || velocity.x < 0) 
@@ -76,16 +86,20 @@ class Player extends Entity{
 			animation.play("jump"); 
 		}
 		
-		
+		if(y >= 600) this.kill();
 		super.update(elapsed);
-
 	}
 
 	override public function collide(o1:Entity,o2:Entity):Void
 	{
-		trace(this);
-		trace("Object 1 = " + o1);
-		trace("Object 2 = " + o2);
+
 	}
 
+	override public function kill()
+	{
+
+		play.add(new FlxText(this.x, this.y + 10, 100, "R to reset",20));
+
+		super.kill();
+	}
 }

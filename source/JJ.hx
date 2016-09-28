@@ -12,11 +12,10 @@ class JJ extends Entity
 	public function new(X:Int, Y:Int, Play:PlayState)
 	{	
 		super(X,Y,Play);
-		loadGraphic("assets/image/jj.png",true,16,16);
+		loadGraphic("assets/images/jj.png",true,16,16);
 
-		animation.add("walking", [0, 1], 16, true);
+		animation.add("walking", [0, 1], 6, true);
 		animation.add("idle", [0]);
-		animation.add("jump", [1]);
 		
 		acceleration.x = 100;
 	}
@@ -37,11 +36,6 @@ class JJ extends Entity
 		{ 
 			animation.play("idle"); 
 		}
-		if (velocity.y < 0) 
-		{ 
-			animation.play("jump"); 
-		}
-		
 		
 		super.update(elapsed);
 
@@ -50,6 +44,8 @@ class JJ extends Entity
 	override public function collide(o1:Entity,o2:Entity):Void
 	{
 
-
+		if(o2.name == "Player"){
+			o2.kill();
+		}
 	}
 }

@@ -34,11 +34,19 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/levels/map1/a.csv");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/levels/map1/s.csv");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		urls.push ("assets/levels/map1/b.csv");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/map1/d.csv");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
@@ -48,6 +56,46 @@ class ApplicationMain {
 		
 		urls.push ("assets/levels/map1/tileset.png");
 		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/levels/map2/a.csv");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/map2/d.csv~");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/map2/s.csv");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/map2/b.csv");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/map2/d.csv");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/map2/m.csv");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/map2/tileset.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/levels/map2/a.csv~");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/map2/m.csv~");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/levels/map2/b.csv~");
+		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		urls.push ("assets/levels/s.csv");
@@ -63,6 +111,18 @@ class ApplicationMain {
 		
 		
 		urls.push ("assets/levels/tileset.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/door.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/player.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/jj.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -159,7 +219,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "5",
+			build: "138",
 			company: "HaxeFlixel",
 			file: "Game",
 			fps: 60,

@@ -22,4 +22,9 @@ class Entity extends FlxSprite
 
 	}
 
+	override public function reset(X:Float, Y:Float):Void 
+	{
+		super.reset(X, Y);	
+	}
+
 }

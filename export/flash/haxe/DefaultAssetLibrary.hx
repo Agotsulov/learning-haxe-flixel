@@ -65,6 +65,21 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -75,14 +90,38 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
 		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
+		className.set ("assets/levels/map1/a.csv", __ASSET__assets_levels_map1_a_csv);
+		type.set ("assets/levels/map1/a.csv", AssetType.TEXT);
 		className.set ("assets/levels/map1/s.csv", __ASSET__assets_levels_map1_s_csv);
 		type.set ("assets/levels/map1/s.csv", AssetType.TEXT);
 		className.set ("assets/levels/map1/b.csv", __ASSET__assets_levels_map1_b_csv);
 		type.set ("assets/levels/map1/b.csv", AssetType.TEXT);
+		className.set ("assets/levels/map1/d.csv", __ASSET__assets_levels_map1_d_csv);
+		type.set ("assets/levels/map1/d.csv", AssetType.TEXT);
 		className.set ("assets/levels/map1/m.csv", __ASSET__assets_levels_map1_m_csv);
 		type.set ("assets/levels/map1/m.csv", AssetType.TEXT);
 		className.set ("assets/levels/map1/tileset.png", __ASSET__assets_levels_map1_tileset_png);
 		type.set ("assets/levels/map1/tileset.png", AssetType.IMAGE);
+		className.set ("assets/levels/map2/a.csv", __ASSET__assets_levels_map2_a_csv);
+		type.set ("assets/levels/map2/a.csv", AssetType.TEXT);
+		className.set ("assets/levels/map2/d.csv~", __ASSET__assets_levels_map2_d_csv_);
+		type.set ("assets/levels/map2/d.csv~", AssetType.TEXT);
+		className.set ("assets/levels/map2/s.csv", __ASSET__assets_levels_map2_s_csv);
+		type.set ("assets/levels/map2/s.csv", AssetType.TEXT);
+		className.set ("assets/levels/map2/b.csv", __ASSET__assets_levels_map2_b_csv);
+		type.set ("assets/levels/map2/b.csv", AssetType.TEXT);
+		className.set ("assets/levels/map2/d.csv", __ASSET__assets_levels_map2_d_csv);
+		type.set ("assets/levels/map2/d.csv", AssetType.TEXT);
+		className.set ("assets/levels/map2/m.csv", __ASSET__assets_levels_map2_m_csv);
+		type.set ("assets/levels/map2/m.csv", AssetType.TEXT);
+		className.set ("assets/levels/map2/tileset.png", __ASSET__assets_levels_map2_tileset_png);
+		type.set ("assets/levels/map2/tileset.png", AssetType.IMAGE);
+		className.set ("assets/levels/map2/a.csv~", __ASSET__assets_levels_map2_a_csv_);
+		type.set ("assets/levels/map2/a.csv~", AssetType.TEXT);
+		className.set ("assets/levels/map2/m.csv~", __ASSET__assets_levels_map2_m_csv_);
+		type.set ("assets/levels/map2/m.csv~", AssetType.TEXT);
+		className.set ("assets/levels/map2/b.csv~", __ASSET__assets_levels_map2_b_csv_);
+		type.set ("assets/levels/map2/b.csv~", AssetType.TEXT);
 		className.set ("assets/levels/s.csv", __ASSET__assets_levels_s_csv);
 		type.set ("assets/levels/s.csv", AssetType.TEXT);
 		className.set ("assets/levels/b.csv", __ASSET__assets_levels_b_csv);
@@ -91,6 +130,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/levels/m.csv", AssetType.TEXT);
 		className.set ("assets/levels/tileset.png", __ASSET__assets_levels_tileset_png);
 		type.set ("assets/levels/tileset.png", AssetType.IMAGE);
+		className.set ("assets/images/door.png", __ASSET__assets_images_door_png);
+		type.set ("assets/images/door.png", AssetType.IMAGE);
+		className.set ("assets/images/player.png", __ASSET__assets_images_player_png);
+		type.set ("assets/images/player.png", AssetType.IMAGE);
+		className.set ("assets/images/jj.png", __ASSET__assets_images_jj_png);
+		type.set ("assets/images/jj.png", AssetType.IMAGE);
 		className.set ("assets/images/images-go-here.txt", __ASSET__assets_images_images_go_here_txt);
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
 		className.set ("assets/music/music-goes-here.txt", __ASSET__assets_music_music_goes_here_txt);
@@ -116,11 +161,19 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map1/a.csv";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
 		id = "assets/levels/map1/s.csv";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
 		id = "assets/levels/map1/b.csv";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map1/d.csv";
 		path.set (id, id);
 		
 		type.set (id, AssetType.TEXT);
@@ -132,6 +185,46 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "assets/levels/map2/a.csv";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map2/d.csv~";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map2/s.csv";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map2/b.csv";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map2/d.csv";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map2/m.csv";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map2/tileset.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/levels/map2/a.csv~";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map2/m.csv~";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map2/b.csv~";
+		path.set (id, id);
+		
+		type.set (id, AssetType.TEXT);
 		id = "assets/levels/s.csv";
 		path.set (id, id);
 		
@@ -145,6 +238,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.TEXT);
 		id = "assets/levels/tileset.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/door.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/player.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/jj.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -201,17 +306,53 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("assets/sounds/sounds-go-here.txt", __ASSET__assets_sounds_sounds_go_here_txt);
 		type.set ("assets/sounds/sounds-go-here.txt", AssetType.TEXT);
 		
+		className.set ("assets/levels/map1/a.csv", __ASSET__assets_levels_map1_a_csv);
+		type.set ("assets/levels/map1/a.csv", AssetType.TEXT);
+		
 		className.set ("assets/levels/map1/s.csv", __ASSET__assets_levels_map1_s_csv);
 		type.set ("assets/levels/map1/s.csv", AssetType.TEXT);
 		
 		className.set ("assets/levels/map1/b.csv", __ASSET__assets_levels_map1_b_csv);
 		type.set ("assets/levels/map1/b.csv", AssetType.TEXT);
 		
+		className.set ("assets/levels/map1/d.csv", __ASSET__assets_levels_map1_d_csv);
+		type.set ("assets/levels/map1/d.csv", AssetType.TEXT);
+		
 		className.set ("assets/levels/map1/m.csv", __ASSET__assets_levels_map1_m_csv);
 		type.set ("assets/levels/map1/m.csv", AssetType.TEXT);
 		
 		className.set ("assets/levels/map1/tileset.png", __ASSET__assets_levels_map1_tileset_png);
 		type.set ("assets/levels/map1/tileset.png", AssetType.IMAGE);
+		
+		className.set ("assets/levels/map2/a.csv", __ASSET__assets_levels_map2_a_csv);
+		type.set ("assets/levels/map2/a.csv", AssetType.TEXT);
+		
+		className.set ("assets/levels/map2/d.csv~", __ASSET__assets_levels_map2_d_csv_);
+		type.set ("assets/levels/map2/d.csv~", AssetType.TEXT);
+		
+		className.set ("assets/levels/map2/s.csv", __ASSET__assets_levels_map2_s_csv);
+		type.set ("assets/levels/map2/s.csv", AssetType.TEXT);
+		
+		className.set ("assets/levels/map2/b.csv", __ASSET__assets_levels_map2_b_csv);
+		type.set ("assets/levels/map2/b.csv", AssetType.TEXT);
+		
+		className.set ("assets/levels/map2/d.csv", __ASSET__assets_levels_map2_d_csv);
+		type.set ("assets/levels/map2/d.csv", AssetType.TEXT);
+		
+		className.set ("assets/levels/map2/m.csv", __ASSET__assets_levels_map2_m_csv);
+		type.set ("assets/levels/map2/m.csv", AssetType.TEXT);
+		
+		className.set ("assets/levels/map2/tileset.png", __ASSET__assets_levels_map2_tileset_png);
+		type.set ("assets/levels/map2/tileset.png", AssetType.IMAGE);
+		
+		className.set ("assets/levels/map2/a.csv~", __ASSET__assets_levels_map2_a_csv_);
+		type.set ("assets/levels/map2/a.csv~", AssetType.TEXT);
+		
+		className.set ("assets/levels/map2/m.csv~", __ASSET__assets_levels_map2_m_csv_);
+		type.set ("assets/levels/map2/m.csv~", AssetType.TEXT);
+		
+		className.set ("assets/levels/map2/b.csv~", __ASSET__assets_levels_map2_b_csv_);
+		type.set ("assets/levels/map2/b.csv~", AssetType.TEXT);
 		
 		className.set ("assets/levels/s.csv", __ASSET__assets_levels_s_csv);
 		type.set ("assets/levels/s.csv", AssetType.TEXT);
@@ -224,6 +365,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("assets/levels/tileset.png", __ASSET__assets_levels_tileset_png);
 		type.set ("assets/levels/tileset.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/door.png", __ASSET__assets_images_door_png);
+		type.set ("assets/images/door.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/player.png", __ASSET__assets_images_player_png);
+		type.set ("assets/images/player.png", AssetType.IMAGE);
+		
+		className.set ("assets/images/jj.png", __ASSET__assets_images_jj_png);
+		type.set ("assets/images/jj.png", AssetType.IMAGE);
 		
 		className.set ("assets/images/images-go-here.txt", __ASSET__assets_images_images_go_here_txt);
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
@@ -894,14 +1044,29 @@ class DefaultAssetLibrary extends AssetLibrary {
 #if flash
 
 @:keep @:bind #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_levels_map1_a_csv extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_levels_map1_s_csv extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_levels_map1_b_csv extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_levels_map1_d_csv extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_levels_map1_m_csv extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_levels_map1_tileset_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_levels_map2_a_csv extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_levels_map2_d_csv_ extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_levels_map2_s_csv extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_levels_map2_b_csv extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_levels_map2_d_csv extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_levels_map2_m_csv extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_levels_map2_tileset_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_levels_map2_a_csv_ extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_levels_map2_m_csv_ extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__assets_levels_map2_b_csv_ extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_levels_s_csv extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_levels_b_csv extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_levels_m_csv extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_levels_tileset_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_door_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_player_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__assets_images_jj_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__assets_images_images_go_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_music_music_goes_here_txt extends flash.utils.ByteArray { }
 @:keep @:bind #if display private #end class __ASSET__assets_data_data_goes_here_txt extends flash.utils.ByteArray { }
@@ -913,6 +1078,21 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -941,14 +1121,29 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 @:file("assets/sounds/sounds-go-here.txt") #if display private #end class __ASSET__assets_sounds_sounds_go_here_txt extends lime.utils.Bytes {}
+@:file("assets/levels/map1/a.csv") #if display private #end class __ASSET__assets_levels_map1_a_csv extends lime.utils.Bytes {}
 @:file("assets/levels/map1/s.csv") #if display private #end class __ASSET__assets_levels_map1_s_csv extends lime.utils.Bytes {}
 @:file("assets/levels/map1/b.csv") #if display private #end class __ASSET__assets_levels_map1_b_csv extends lime.utils.Bytes {}
+@:file("assets/levels/map1/d.csv") #if display private #end class __ASSET__assets_levels_map1_d_csv extends lime.utils.Bytes {}
 @:file("assets/levels/map1/m.csv") #if display private #end class __ASSET__assets_levels_map1_m_csv extends lime.utils.Bytes {}
 @:image("assets/levels/map1/tileset.png") #if display private #end class __ASSET__assets_levels_map1_tileset_png extends lime.graphics.Image {}
+@:file("assets/levels/map2/a.csv") #if display private #end class __ASSET__assets_levels_map2_a_csv extends lime.utils.Bytes {}
+@:file("assets/levels/map2/d.csv~") #if display private #end class __ASSET__assets_levels_map2_d_csv_ extends lime.utils.Bytes {}
+@:file("assets/levels/map2/s.csv") #if display private #end class __ASSET__assets_levels_map2_s_csv extends lime.utils.Bytes {}
+@:file("assets/levels/map2/b.csv") #if display private #end class __ASSET__assets_levels_map2_b_csv extends lime.utils.Bytes {}
+@:file("assets/levels/map2/d.csv") #if display private #end class __ASSET__assets_levels_map2_d_csv extends lime.utils.Bytes {}
+@:file("assets/levels/map2/m.csv") #if display private #end class __ASSET__assets_levels_map2_m_csv extends lime.utils.Bytes {}
+@:image("assets/levels/map2/tileset.png") #if display private #end class __ASSET__assets_levels_map2_tileset_png extends lime.graphics.Image {}
+@:file("assets/levels/map2/a.csv~") #if display private #end class __ASSET__assets_levels_map2_a_csv_ extends lime.utils.Bytes {}
+@:file("assets/levels/map2/m.csv~") #if display private #end class __ASSET__assets_levels_map2_m_csv_ extends lime.utils.Bytes {}
+@:file("assets/levels/map2/b.csv~") #if display private #end class __ASSET__assets_levels_map2_b_csv_ extends lime.utils.Bytes {}
 @:file("assets/levels/s.csv") #if display private #end class __ASSET__assets_levels_s_csv extends lime.utils.Bytes {}
 @:file("assets/levels/b.csv") #if display private #end class __ASSET__assets_levels_b_csv extends lime.utils.Bytes {}
 @:file("assets/levels/m.csv") #if display private #end class __ASSET__assets_levels_m_csv extends lime.utils.Bytes {}
 @:image("assets/levels/tileset.png") #if display private #end class __ASSET__assets_levels_tileset_png extends lime.graphics.Image {}
+@:image("assets/images/door.png") #if display private #end class __ASSET__assets_images_door_png extends lime.graphics.Image {}
+@:image("assets/images/player.png") #if display private #end class __ASSET__assets_images_player_png extends lime.graphics.Image {}
+@:image("assets/images/jj.png") #if display private #end class __ASSET__assets_images_jj_png extends lime.graphics.Image {}
 @:file("assets/images/images-go-here.txt") #if display private #end class __ASSET__assets_images_images_go_here_txt extends lime.utils.Bytes {}
 @:file("assets/music/music-goes-here.txt") #if display private #end class __ASSET__assets_music_music_goes_here_txt extends lime.utils.Bytes {}
 @:file("assets/data/data-goes-here.txt") #if display private #end class __ASSET__assets_data_data_goes_here_txt extends lime.utils.Bytes {}

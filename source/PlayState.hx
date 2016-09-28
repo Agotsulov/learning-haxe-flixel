@@ -15,20 +15,28 @@ class PlayState extends FlxState
 
 	override public function create():Void
 	{
-		loadLevel("assets/levels/map1/");
+		loadLevel("assets/levels/map2/");
 		super.create();
 	}
 
 	override public function update(elapsed:Float):Void
 	{
-		FlxG.collide(player,loader.map);
 		FlxG.collide(loader.actors,loader.map);
 		super.update(elapsed);
-		FlxG.overlap(player,loader.actors,player.collide);
-		for(entity in loader.actors.members) {
-			var e:Entity = cast entity;
-			FlxG.overlap(e,player,e.collide);	
+		for(entity1 in loader.actors.members) {
+			for(entity2 in loader.actors.members){
+				var e1:Entity = cast entity1;
+				var e2:Entity = cast entity2;
+				if(e1 != e2) FlxG.overlap(e1,e2,e1.collide);
+			}
 		}
+		if (FlxG.keys.anyPressed([R]))
+		{
+			loadLevel(loader.path);
+		}
+
+		
+
 	}
 
 
@@ -39,9 +47,8 @@ class PlayState extends FlxState
 		add(loader.background);
 		add(loader.map);
 		add(loader.actors);
-		add(player = new Player(10,10,this));
-		FlxG.camera.follow(player, PLATFORMER, 1); 
-
+		//add(player = new Player(10,10,this));
+		
 
 	}
 }
