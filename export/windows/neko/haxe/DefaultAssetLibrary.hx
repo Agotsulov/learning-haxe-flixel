@@ -71,6 +71,21 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		Font.registerFont (__ASSET__flixel_fonts_nokiafc22_ttf);
 		Font.registerFont (__ASSET__flixel_fonts_monsterrat_ttf);
 		
@@ -79,6 +94,21 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -604,6 +634,21 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_nokiafc22_ttf);
 		openfl.text.Font.registerFont (__ASSET__OPENFL__flixel_fonts_monsterrat_ttf);
 		
@@ -620,10 +665,34 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/levels/map1/s.csv", AssetType.TEXT);
 		path.set ("assets/levels/map1/b.csv", "assets/levels/map1/b.csv");
 		type.set ("assets/levels/map1/b.csv", AssetType.TEXT);
+		path.set ("assets/levels/map1/d.csv", "assets/levels/map1/d.csv");
+		type.set ("assets/levels/map1/d.csv", AssetType.TEXT);
 		path.set ("assets/levels/map1/m.csv", "assets/levels/map1/m.csv");
 		type.set ("assets/levels/map1/m.csv", AssetType.TEXT);
 		path.set ("assets/levels/map1/tileset.png", "assets/levels/map1/tileset.png");
 		type.set ("assets/levels/map1/tileset.png", AssetType.IMAGE);
+		path.set ("assets/levels/map1/m.csv~", "assets/levels/map1/m.csv~");
+		type.set ("assets/levels/map1/m.csv~", AssetType.TEXT);
+		path.set ("assets/levels/map2/a.csv", "assets/levels/map2/a.csv");
+		type.set ("assets/levels/map2/a.csv", AssetType.TEXT);
+		path.set ("assets/levels/map2/d.csv~", "assets/levels/map2/d.csv~");
+		type.set ("assets/levels/map2/d.csv~", AssetType.TEXT);
+		path.set ("assets/levels/map2/s.csv", "assets/levels/map2/s.csv");
+		type.set ("assets/levels/map2/s.csv", AssetType.TEXT);
+		path.set ("assets/levels/map2/b.csv", "assets/levels/map2/b.csv");
+		type.set ("assets/levels/map2/b.csv", AssetType.TEXT);
+		path.set ("assets/levels/map2/d.csv", "assets/levels/map2/d.csv");
+		type.set ("assets/levels/map2/d.csv", AssetType.TEXT);
+		path.set ("assets/levels/map2/m.csv", "assets/levels/map2/m.csv");
+		type.set ("assets/levels/map2/m.csv", AssetType.TEXT);
+		path.set ("assets/levels/map2/tileset.png", "assets/levels/map2/tileset.png");
+		type.set ("assets/levels/map2/tileset.png", AssetType.IMAGE);
+		path.set ("assets/levels/map2/a.csv~", "assets/levels/map2/a.csv~");
+		type.set ("assets/levels/map2/a.csv~", AssetType.TEXT);
+		path.set ("assets/levels/map2/m.csv~", "assets/levels/map2/m.csv~");
+		type.set ("assets/levels/map2/m.csv~", AssetType.TEXT);
+		path.set ("assets/levels/map2/b.csv~", "assets/levels/map2/b.csv~");
+		type.set ("assets/levels/map2/b.csv~", AssetType.TEXT);
 		path.set ("assets/levels/s.csv", "assets/levels/s.csv");
 		type.set ("assets/levels/s.csv", AssetType.TEXT);
 		path.set ("assets/levels/b.csv", "assets/levels/b.csv");
@@ -632,6 +701,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("assets/levels/m.csv", AssetType.TEXT);
 		path.set ("assets/levels/tileset.png", "assets/levels/tileset.png");
 		type.set ("assets/levels/tileset.png", AssetType.IMAGE);
+		path.set ("assets/images/door.png", "assets/images/door.png");
+		type.set ("assets/images/door.png", AssetType.IMAGE);
+		path.set ("assets/images/player.png", "assets/images/player.png");
+		type.set ("assets/images/player.png", AssetType.IMAGE);
+		path.set ("assets/images/jj.png", "assets/images/jj.png");
+		type.set ("assets/images/jj.png", AssetType.IMAGE);
 		path.set ("assets/images/images-go-here.txt", "assets/images/images-go-here.txt");
 		type.set ("assets/images/images-go-here.txt", AssetType.TEXT);
 		path.set ("assets/music/music-goes-here.txt", "assets/music/music-goes-here.txt");
@@ -665,12 +740,48 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "assets/levels/map1/b.csv";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map1/d.csv";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
 		id = "assets/levels/map1/m.csv";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
 		id = "assets/levels/map1/tileset.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "assets/levels/map1/m.csv~";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map2/a.csv";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map2/d.csv~";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map2/s.csv";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map2/b.csv";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map2/d.csv";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map2/m.csv";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map2/tileset.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/levels/map2/a.csv~";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map2/m.csv~";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "assets/levels/map2/b.csv~";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
 		id = "assets/levels/s.csv";
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
@@ -681,6 +792,15 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		type.set (id, AssetType.TEXT);
 		id = "assets/levels/tileset.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/door.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/player.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "assets/images/jj.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "assets/images/images-go-here.txt";
@@ -729,6 +849,21 @@ class DefaultAssetLibrary extends AssetLibrary {
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -1488,6 +1623,21 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_beep_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_sounds_flixel_ogg extends null { }
 @:keep @:bind #if display private #end class __ASSET__flixel_fonts_nokiafc22_ttf extends null { }
@@ -1496,6 +1646,21 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 #elseif html5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

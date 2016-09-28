@@ -16,7 +16,7 @@ class MenuState extends FlxState
 	{
 		super.create();
  		button = new FlxButton(0,0,"Play",click);
- 		button.centerOrigin();
+ 		button.screenCenter();
  		add(button);
 	}
 

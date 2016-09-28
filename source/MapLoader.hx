@@ -59,7 +59,6 @@ class MapLoader {
 		for (j in 0...doors.length)
 		{
 			aa = doors[j].split(","); 
-			trace(aa[0] + aa[1] + aa[2]); 
 			if((aa[2] != null) && (aa[1] != null)) actors.add(new Door(Std.parseInt(aa[1]),Std.parseInt(aa[2]),play,aa[0]));
 		}		
 

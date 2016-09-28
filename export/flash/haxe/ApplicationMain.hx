@@ -58,6 +58,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/levels/map1/m.csv~");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
 		urls.push ("assets/levels/map2/a.csv");
 		types.push (lime.Assets.AssetType.TEXT);
 		
@@ -219,7 +223,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "138",
+			build: "146",
 			company: "HaxeFlixel",
 			file: "Game",
 			fps: 60,
