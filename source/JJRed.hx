@@ -32,7 +32,12 @@ class JJRed extends Entity{
 		}
 		
 		var p:Player = play.loader.player;
-		if((p.x <= this.x + 96) && (p.y <= this.y + 96)) trace("afsdfasdfsdf"); 
+		if((p.x >= this.x - 32) && (p.y >= this.y - 32) && (p.x <= this.x) && (p.y <= this.y)) {
+			velocity.y = -150;
+		} 
+		if((p.x >= this.x) && (p.y >= this.y) && (p.x <= this.x + 32) && (p.y <= this.y + 32)) {
+			velocity.y = -150;
+		} 
 
 		super.update(elapsed);
 
