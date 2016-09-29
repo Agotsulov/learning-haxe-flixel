@@ -47,7 +47,8 @@ class MapLoader {
 			if (coords[0] == "player"){
 				player = new Player(Std.parseInt(coords[1]),Std.parseInt(coords[2]),play); 
 				actors.add(player);
-				FlxG.camera.follow(player, PLATFORMER, 1); 
+				FlxG.worldBounds.set(0,0,map.widthInTiles * 16,map.heightInTiles * 16);
+				FlxG.camera.follow(player,PLATFORMER, 1); 
 			}
 
 			if (coords[0] == "coin"){
@@ -56,6 +57,10 @@ class MapLoader {
 
 			if (coords[0] == "spike"){
 				actors.add(new Spike(Std.parseInt(coords[1]),Std.parseInt(coords[2]),play));
+			}
+
+			if (coords[0] == "jjred"){
+				actors.add(new JJRed(Std.parseInt(coords[1]),Std.parseInt(coords[2]),play));
 			}
 
 		}

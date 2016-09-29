@@ -16,6 +16,7 @@ class PlayState extends FlxState
 	override public function create():Void
 	{
 		loadLevel("assets/levels/map1/");
+		//loader.map.follow();
 		super.create();
 	}
 
