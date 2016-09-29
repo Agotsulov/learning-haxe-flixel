@@ -64,10 +64,14 @@ class AssetData {
 			type.set ("assets/images/door.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/player.png", "assets/images/player.png");
 			type.set ("assets/images/player.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("assets/images/coin.png", "assets/images/coin.png");
+			type.set ("assets/images/coin.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/jj.png", "assets/images/jj.png");
 			type.set ("assets/images/jj.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/images/images-go-here.txt", "assets/images/images-go-here.txt");
 			type.set ("assets/images/images-go-here.txt", Reflect.field (AssetType, "text".toUpperCase ()));
+			path.set ("assets/images/spike.png", "assets/images/spike.png");
+			type.set ("assets/images/spike.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("assets/music/music-goes-here.txt", "assets/music/music-goes-here.txt");
 			type.set ("assets/music/music-goes-here.txt", Reflect.field (AssetType, "text".toUpperCase ()));
 			path.set ("assets/data/data-goes-here.txt", "assets/data/data-goes-here.txt");

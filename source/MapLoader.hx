@@ -50,6 +50,14 @@ class MapLoader {
 				FlxG.camera.follow(player, PLATFORMER, 1); 
 			}
 
+			if (coords[0] == "coin"){
+				actors.add(new Coin(Std.parseInt(coords[1]),Std.parseInt(coords[2]),play));
+			}
+
+			if (coords[0] == "spike"){
+				actors.add(new Spike(Std.parseInt(coords[1]),Std.parseInt(coords[2]),play));
+			}
+
 		}
 	
 		

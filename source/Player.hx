@@ -11,11 +11,14 @@ import flixel.text.FlxText;
 
 class Player extends Entity{
 
-	public static inline var RUN_SPEED:Int = 100;
+	public static inline var RUN_SPEED:Int = 150;
 	public static inline var GRAVITY:Int = 620;
 	public static inline var JUMP_SPEED:Int = 250;
 	public static var HEALTH:Int = 100;
 	public var ability:Ability;
+	public var coins:Int = 0;
+	public var textCoins:FlxText;
+		
 
 	public function new(X:Int,Y:Int,play:PlayState)
 	{
@@ -36,8 +39,10 @@ class Player extends Entity{
 
 		health = HEALTH;
 
-		//offset.set(3, 4);
-		
+
+		play.add(textCoins = new FlxText(10, 10, 200, "Coin = " + coins,18));
+
+		textCoins.scrollFactor.set(0, 0);
 	}
 
 	override public function update(elapsed:Float):Void
@@ -70,6 +75,7 @@ class Player extends Entity{
 		if (FlxG.keys.anyPressed([Z]))
 		{				
 			ability.use(elapsed);
+			trace(coins);
 		}
 		
 		
@@ -86,6 +92,7 @@ class Player extends Entity{
 			animation.play("jump"); 
 		}
 		
+		textCoins.text = "Coin = " + coins;
 		if(y >= 600) this.kill();
 		super.update(elapsed);
 	}
@@ -99,7 +106,6 @@ class Player extends Entity{
 	{
 
 		play.add(new FlxText(this.x, this.y + 10, 100, "R to reset",20));
-
 		super.kill();
 	}
 }
