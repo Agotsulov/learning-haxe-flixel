@@ -1,5 +1,6 @@
 package;
 
+import abilites.megaJump.MegaJump;
 import flixel.input.keyboard.FlxKey;
 import openfl.Assets;
 import flixel.effects.particles.FlxEmitter;
@@ -18,8 +19,8 @@ class Player extends Entity{
 	public var ability:Ability;
 	public var coins:Int = 0;
 	public var textCoins:FlxText;
-		
-
+	public var textHealth:FlxText;
+	
 	public function new(X:Int,Y:Int,play:PlayState)
 	{
 		super(X,Y,play,"Player");
@@ -35,21 +36,27 @@ class Player extends Entity{
 		acceleration.y = GRAVITY;
 		setSize(12, 16);
 
-		ability = new Ability(cast this,play);
+		//ability = new Ability(cast this,play);
+		ability = new MegaJump(cast this,play);
 
+		
+		addTag("Alive");
+		
 		health = HEALTH;
 
 
 		play.add(textCoins = new FlxText(10, 10, 200, "Coin = " + coins,18));
+		play.add(textHealth = new FlxText(100, 10, 200, "Health = " + health,18));
 
+		textHealth.scrollFactor.set(0, 0);
 		textCoins.scrollFactor.set(0, 0);
 	}
 
 	override public function update(elapsed:Float):Void
 	{
-		acceleration.x = 0; 
-	
+		acceleration.x = 0;
 		
+
 		if (FlxG.keys.anyPressed([LEFT, A]))
 		{
 			flipX = true;
@@ -90,9 +97,9 @@ class Player extends Entity{
 		if (velocity.y < 0) 
 		{ 
 			animation.play("jump"); 
-		}
-		
+		}	
 		textCoins.text = "Coin = " + coins;
+		textHealth.text = "Health = " + health;
 		if(y >= 600) this.kill();
 		super.update(elapsed);
 	}
@@ -100,7 +107,28 @@ class Player extends Entity{
 	override public function collide(o1:Entity,o2:Entity):Void
 	{
 
+		if((o1.name == "JJ") && (velocity.y > 11) && (!isTouching(FlxObject.FLOOR))){ 	
+			o1.kill();
+			velocity.y = -200;
+		}
+
+		if((o2.name == "JJ") && (velocity.y > 11) && (!isTouching(FlxObject.FLOOR))){ 
+			o2.kill();
+			velocity.y = -200;
+		}
+
+		if((o1.name == "JJRed") && (velocity.y > 11) && (!isTouching(FlxObject.FLOOR))){ 	
+			o1.kill();
+			velocity.y = -200;
+		}
+
+		if((o2.name == "JJRed") && (velocity.y > 11) && (!isTouching(FlxObject.FLOOR))){ 
+			o2.kill();
+			velocity.y = -200;
+		}
 	}
+
+	
 
 	override public function kill()
 	{

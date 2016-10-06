@@ -29,9 +29,7 @@ class MapLoader {
 		map.loadMapFromCSV(foldername + "m.csv", foldername + "tileset.png", 16, 16,OFF,1,1);
 	
 		actors = new FlxGroup();
-
-				
-		
+	
 		var coords:Array<String>;
 		var entities:Array<String> = Assets.getText(foldername + "a.csv").split("\n");   
 		
@@ -78,6 +76,13 @@ class MapLoader {
 	}
 
 
-
+	public function getEntity(name:String):Entity
+	{
+		for(a in actors){
+			var e:Entity = cast a;
+			if(e.name == name) return e;
+		}
+		return null;
+	}
 
 }

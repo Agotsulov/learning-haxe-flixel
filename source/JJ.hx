@@ -11,12 +11,14 @@ class JJ extends Entity
 
 	public function new(X:Int, Y:Int, Play:PlayState)
 	{	
-		super(X,Y,Play);
+		super(X,Y,Play,"JJ");
 		loadGraphic("assets/images/jj.png",true,16,16);
 
 		animation.add("walking", [0, 1], 6, true);
 		animation.add("idle", [0]);
 		
+		addTag("Alive");
+
 		acceleration.x = 100;
 	}
 
@@ -42,10 +44,17 @@ class JJ extends Entity
 	}
 
 	override public function collide(o1:Entity,o2:Entity):Void
-	{
-
+	{			
 		if(o2.name == "Player"){
-			o2.kill();
+			o2.hurt(35);
 		}
+	}
+
+	override public function kill():Void
+	{
+		var C:Coin = new Coin(cast x,cast y,play);
+		play.add(C);
+		play.loader.actors.add(C);
+		super.kill();
 	}
 }

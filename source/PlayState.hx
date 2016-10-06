@@ -49,7 +49,10 @@ class PlayState extends FlxState
 		add(loader.map);
 		add(loader.actors);
 		//add(player = new Player(10,10,this));
-		
-
 	}
+
+	public function addActor(actor:Entity){
+		add(actor);
+		loader.actors.add(actor);
+	}	
 }

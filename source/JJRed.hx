@@ -1,7 +1,6 @@
 package;
 
-import flixel.FlxSprite;
-import flixel.FlxObject;
+import abilites.megaJump.MegaJumpObject;
 
 class JJRed extends Entity{
 	public static inline var GRAVITY:Int = 620;
@@ -9,12 +8,12 @@ class JJRed extends Entity{
 
 	public function new(X:Int, Y:Int, Play:PlayState)
 	{	
-		super(X,Y,Play);
+		super(X,Y,Play,"JJRed");
 		loadGraphic("assets/images/jjred.png",true,16,16);
 
 		animation.add("walking", [0, 1], 6, true);
 		animation.add("idle", [0]);
-		
+		addTag("Alive");	
 	}
 
 
@@ -31,7 +30,7 @@ class JJRed extends Entity{
 			animation.play("idle"); 
 		}
 		
-		var p:Player = play.loader.player;
+		var p:Entity = play.loader.getEntity("Player");
 		if((p.x >= this.x - 32) && (p.y >= this.y - 32) && (p.x <= this.x) && (p.y <= this.y)) {
 			velocity.y = -150;
 		} 
@@ -47,7 +46,23 @@ class JJRed extends Entity{
 	{
 
 		if(o2.name == "Player"){
-			o2.kill();
+			o2.hurt(10);
+			o2.velocity.y = -250;
 		}
+
+		if(o1.name == "Player"){
+			o1.hurt(10);
+			
+			o2.velocity.y = -250;
+		}
+
 	}
+
+	override public function kill():Void
+	{
+		var C:MegaJumpObject = new MegaJumpObject(cast x,cast y,play);
+		play.add(C);
+		play.loader.actors.add(C);
+		super.kill();
+	} 
 }
