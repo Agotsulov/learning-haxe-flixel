@@ -12,6 +12,9 @@
 #ifndef INCLUDED_flixel_FlxObject
 #include <flixel/FlxObject.h>
 #endif
+#ifndef INCLUDED_flixel_FlxSprite
+#include <flixel/FlxSprite.h>
+#endif
 #ifndef INCLUDED_flixel_FlxState
 #include <flixel/FlxState.h>
 #endif
@@ -25,7 +28,7 @@
 #include <haxe/Log.h>
 #endif
 
-Void Ability_obj::__construct(::flixel::FlxObject Object,::PlayState State)
+Void Ability_obj::__construct(::flixel::FlxSprite Object,::PlayState State)
 {
 HX_STACK_FRAME("Ability","new",0x3532b77c,"Ability.new","Ability.hx",14,0xaa23cb74)
 HX_STACK_THIS(this)
@@ -44,7 +47,7 @@ HX_STACK_ARG(State,"State")
 //Ability_obj::~Ability_obj() { }
 
 Dynamic Ability_obj::__CreateEmpty() { return  new Ability_obj; }
-hx::ObjectPtr< Ability_obj > Ability_obj::__new(::flixel::FlxObject Object,::PlayState State)
+hx::ObjectPtr< Ability_obj > Ability_obj::__new(::flixel::FlxSprite Object,::PlayState State)
 {  hx::ObjectPtr< Ability_obj > _result_ = new Ability_obj();
 	_result_->__construct(Object,State);
 	return _result_;}
@@ -111,7 +114,7 @@ Dynamic Ability_obj::__SetField(const ::String &inName,const Dynamic &inValue,hx
 		if (HX_FIELD_EQ(inName,"State") ) { State=inValue.Cast< ::PlayState >(); return inValue; }
 		break;
 	case 6:
-		if (HX_FIELD_EQ(inName,"Object") ) { Object=inValue.Cast< ::flixel::FlxObject >(); return inValue; }
+		if (HX_FIELD_EQ(inName,"Object") ) { Object=inValue.Cast< ::flixel::FlxSprite >(); return inValue; }
 	}
 	return super::__SetField(inName,inValue,inCallProp);
 }
@@ -125,7 +128,7 @@ void Ability_obj::__GetFields(Array< ::String> &outFields)
 
 #if HXCPP_SCRIPTABLE
 static hx::StorageInfo sMemberStorageInfo[] = {
-	{hx::fsObject /*::flixel::FlxObject*/ ,(int)offsetof(Ability_obj,Object),HX_HCSTRING("Object","\xdf","\xf2","\xd3","\x49")},
+	{hx::fsObject /*::flixel::FlxSprite*/ ,(int)offsetof(Ability_obj,Object),HX_HCSTRING("Object","\xdf","\xf2","\xd3","\x49")},
 	{hx::fsObject /*::PlayState*/ ,(int)offsetof(Ability_obj,State),HX_HCSTRING("State","\xf1","\xe5","\x38","\x17")},
 	{ hx::fsUnknown, 0, null()}
 };

@@ -9,6 +9,7 @@ HX_DECLARE_CLASS0(Ability)
 HX_DECLARE_CLASS0(PlayState)
 HX_DECLARE_CLASS1(flixel,FlxBasic)
 HX_DECLARE_CLASS1(flixel,FlxObject)
+HX_DECLARE_CLASS1(flixel,FlxSprite)
 HX_DECLARE_CLASS1(flixel,FlxState)
 HX_DECLARE_CLASS2(flixel,group,FlxTypedGroup)
 HX_DECLARE_CLASS2(flixel,util,IFlxDestroyable)
@@ -19,12 +20,12 @@ class HXCPP_CLASS_ATTRIBUTES  Ability_obj : public hx::Object{
 		typedef hx::Object super;
 		typedef Ability_obj OBJ_;
 		Ability_obj();
-		Void __construct(::flixel::FlxObject Object,::PlayState State);
+		Void __construct(::flixel::FlxSprite Object,::PlayState State);
 
 	public:
 		inline void *operator new( size_t inSize, bool inContainer=true,const char *inName="Ability")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
-		static hx::ObjectPtr< Ability_obj > __new(::flixel::FlxObject Object,::PlayState State);
+		static hx::ObjectPtr< Ability_obj > __new(::flixel::FlxSprite Object,::PlayState State);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~Ability_obj();
@@ -38,7 +39,7 @@ class HXCPP_CLASS_ATTRIBUTES  Ability_obj : public hx::Object{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("Ability","\x8a","\x89","\xb2","\x7a"); }
 
-		::flixel::FlxObject Object;
+		::flixel::FlxSprite Object;
 		::PlayState State;
 		virtual Void use( Float elapsed);
 		Dynamic use_dyn();

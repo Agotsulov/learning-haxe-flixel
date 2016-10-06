@@ -39,9 +39,8 @@ class Player extends Entity{
 		//ability = new Ability(cast this,play);
 		ability = new MegaJump(cast this,play);
 
-		
-		addTag("Alive");
-		
+
+
 		health = HEALTH;
 
 
@@ -55,13 +54,12 @@ class Player extends Entity{
 	override public function update(elapsed:Float):Void
 	{
 		acceleration.x = 0;
-		
 
 		if (FlxG.keys.anyPressed([LEFT, A]))
 		{
 			flipX = true;
 			acceleration.x = -RUN_SPEED;
-		
+			set_facing(FlxObject.LEFT);
 		}
 		
 		else if (FlxG.keys.anyPressed([RIGHT, D]))
@@ -69,6 +67,7 @@ class Player extends Entity{
 			flipX = false;				
 			acceleration.x = RUN_SPEED;
 		
+			set_facing(FlxObject.RIGHT);
 		}
 		
 		if (FlxG.keys.anyPressed([UP, W]) && isTouching(FlxObject.FLOOR))

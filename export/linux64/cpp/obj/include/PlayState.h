@@ -53,6 +53,9 @@ class HXCPP_CLASS_ATTRIBUTES  PlayState_obj : public ::flixel::FlxState_obj{
 		virtual Void loadLevel( ::String path);
 		Dynamic loadLevel_dyn();
 
+		virtual Void addActor( ::Entity actor);
+		Dynamic addActor_dyn();
+
 };
 
 

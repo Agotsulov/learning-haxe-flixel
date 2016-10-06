@@ -42,7 +42,7 @@
 namespace abilites{
 namespace megaJump{
 
-Void MegaJump_obj::__construct(::flixel::FlxObject Object,::PlayState State)
+Void MegaJump_obj::__construct(::flixel::FlxSprite Object,::PlayState State)
 {
 HX_STACK_FRAME("abilites.megaJump.MegaJump","new",0xef3de72f,"abilites.megaJump.MegaJump.new","abilites/megaJump/MegaJump.hx",10,0x6d9a2741)
 HX_STACK_THIS(this)
@@ -50,7 +50,7 @@ HX_STACK_ARG(Object,"Object")
 HX_STACK_ARG(State,"State")
 {
 	HX_STACK_LINE(11)
-	::flixel::FlxObject tmp = Object;		HX_STACK_VAR(tmp,"tmp");
+	::flixel::FlxSprite tmp = Object;		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(11)
 	::PlayState tmp1 = State;		HX_STACK_VAR(tmp1,"tmp1");
 	HX_STACK_LINE(11)
@@ -63,7 +63,7 @@ HX_STACK_ARG(State,"State")
 //MegaJump_obj::~MegaJump_obj() { }
 
 Dynamic MegaJump_obj::__CreateEmpty() { return  new MegaJump_obj; }
-hx::ObjectPtr< MegaJump_obj > MegaJump_obj::__new(::flixel::FlxObject Object,::PlayState State)
+hx::ObjectPtr< MegaJump_obj > MegaJump_obj::__new(::flixel::FlxSprite Object,::PlayState State)
 {  hx::ObjectPtr< MegaJump_obj > _result_ = new MegaJump_obj();
 	_result_->__construct(Object,State);
 	return _result_;}
@@ -79,13 +79,13 @@ Void MegaJump_obj::use( Float elapsed){
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(elapsed,"elapsed")
 		HX_STACK_LINE(17)
-		::flixel::FlxObject tmp = this->Object;		HX_STACK_VAR(tmp,"tmp");
+		::flixel::FlxSprite tmp = this->Object;		HX_STACK_VAR(tmp,"tmp");
 		HX_STACK_LINE(17)
 		::Player p = ((::Player)(tmp));		HX_STACK_VAR(p,"p");
 		HX_STACK_LINE(18)
 		p->velocity->set_y((int)-1000);
 		HX_STACK_LINE(19)
-		::flixel::FlxObject tmp1 = ((::flixel::FlxObject)(p));		HX_STACK_VAR(tmp1,"tmp1");
+		::flixel::FlxSprite tmp1 = ((::flixel::FlxSprite)(p));		HX_STACK_VAR(tmp1,"tmp1");
 		HX_STACK_LINE(19)
 		::PlayState tmp2 = this->State;		HX_STACK_VAR(tmp2,"tmp2");
 		HX_STACK_LINE(19)

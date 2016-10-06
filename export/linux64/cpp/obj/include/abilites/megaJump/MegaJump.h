@@ -13,6 +13,7 @@ HX_DECLARE_CLASS0(PlayState)
 HX_DECLARE_CLASS2(abilites,megaJump,MegaJump)
 HX_DECLARE_CLASS1(flixel,FlxBasic)
 HX_DECLARE_CLASS1(flixel,FlxObject)
+HX_DECLARE_CLASS1(flixel,FlxSprite)
 HX_DECLARE_CLASS1(flixel,FlxState)
 HX_DECLARE_CLASS2(flixel,group,FlxTypedGroup)
 HX_DECLARE_CLASS2(flixel,util,IFlxDestroyable)
@@ -25,12 +26,12 @@ class HXCPP_CLASS_ATTRIBUTES  MegaJump_obj : public ::Ability_obj{
 		typedef ::Ability_obj super;
 		typedef MegaJump_obj OBJ_;
 		MegaJump_obj();
-		Void __construct(::flixel::FlxObject Object,::PlayState State);
+		Void __construct(::flixel::FlxSprite Object,::PlayState State);
 
 	public:
 		inline void *operator new( size_t inSize, bool inContainer=true,const char *inName="abilites.megaJump.MegaJump")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
-		static hx::ObjectPtr< MegaJump_obj > __new(::flixel::FlxObject Object,::PlayState State);
+		static hx::ObjectPtr< MegaJump_obj > __new(::flixel::FlxSprite Object,::PlayState State);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~MegaJump_obj();

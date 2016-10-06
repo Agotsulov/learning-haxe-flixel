@@ -100,7 +100,7 @@ Void MegaJumpObject_obj::collide( ::Entity o1,::Entity o2){
 			HX_STACK_LINE(20)
 			::Player p = ((::Player)(o1));		HX_STACK_VAR(p,"p");
 			HX_STACK_LINE(21)
-			::flixel::FlxObject tmp1 = ((::flixel::FlxObject)(p));		HX_STACK_VAR(tmp1,"tmp1");
+			::flixel::FlxSprite tmp1 = ((::flixel::FlxSprite)(p));		HX_STACK_VAR(tmp1,"tmp1");
 			HX_STACK_LINE(21)
 			::PlayState tmp2 = this->play;		HX_STACK_VAR(tmp2,"tmp2");
 			HX_STACK_LINE(21)
@@ -118,7 +118,7 @@ Void MegaJumpObject_obj::collide( ::Entity o1,::Entity o2){
 				HX_STACK_LINE(25)
 				::Player p = ((::Player)(o2));		HX_STACK_VAR(p,"p");
 				HX_STACK_LINE(26)
-				::flixel::FlxObject tmp2 = ((::flixel::FlxObject)(p));		HX_STACK_VAR(tmp2,"tmp2");
+				::flixel::FlxSprite tmp2 = ((::flixel::FlxSprite)(p));		HX_STACK_VAR(tmp2,"tmp2");
 				HX_STACK_LINE(26)
 				::PlayState tmp3 = this->play;		HX_STACK_VAR(tmp3,"tmp3");
 				HX_STACK_LINE(26)

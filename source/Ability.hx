@@ -7,10 +7,10 @@ import flixel.FlxObject;
 class Ability
 {
 
-	public var Object:FlxObject;
+	public var Object:FlxSprite;
 	public var State:PlayState;
 
-	public function new(Object:FlxObject,State:PlayState)
+	public function new(Object:FlxSprite,State:PlayState)
 	{
 		this.Object = Object;
 		this.State = State;

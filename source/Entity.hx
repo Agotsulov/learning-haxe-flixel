@@ -13,7 +13,7 @@ class Entity extends FlxSprite
 	public var lastHurt:Float = 0;		
 	public var canHurt:Bool = true;	
 	public var tags:List<String>;
-
+	
 	public function new(X:Int,Y:Int,play:PlayState,name:String = "null",hurtCooldown = 1/20)
 	{
 		super(X,Y);

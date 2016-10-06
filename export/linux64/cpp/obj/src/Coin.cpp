@@ -100,7 +100,7 @@ Void Coin_obj::collide( ::Entity o1,::Entity o2){
 			HX_STACK_LINE(24)
 			(p->coins)++;
 			HX_STACK_LINE(25)
-			::flixel::FlxObject tmp1 = ((::flixel::FlxObject)(p));		HX_STACK_VAR(tmp1,"tmp1");
+			::flixel::FlxSprite tmp1 = ((::flixel::FlxSprite)(p));		HX_STACK_VAR(tmp1,"tmp1");
 			HX_STACK_LINE(25)
 			::PlayState tmp2 = this->play;		HX_STACK_VAR(tmp2,"tmp2");
 			HX_STACK_LINE(25)
@@ -120,7 +120,7 @@ Void Coin_obj::collide( ::Entity o1,::Entity o2){
 				HX_STACK_LINE(30)
 				(p->coins)++;
 				HX_STACK_LINE(31)
-				::flixel::FlxObject tmp2 = ((::flixel::FlxObject)(p));		HX_STACK_VAR(tmp2,"tmp2");
+				::flixel::FlxSprite tmp2 = ((::flixel::FlxSprite)(p));		HX_STACK_VAR(tmp2,"tmp2");
 				HX_STACK_LINE(31)
 				::PlayState tmp3 = this->play;		HX_STACK_VAR(tmp3,"tmp3");
 				HX_STACK_LINE(31)

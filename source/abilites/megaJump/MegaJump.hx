@@ -6,7 +6,7 @@ import flixel.FlxObject;
 
 class MegaJump extends Ability
 {
-	public function new(Object:FlxObject,State:PlayState)
+	public function new(Object:FlxSprite,State:PlayState)
 	{
 		super(Object,State);
 	}

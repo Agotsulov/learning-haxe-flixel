@@ -236,6 +236,28 @@ return null();
 
 HX_DEFINE_DYNAMIC_FUNC1(PlayState_obj,loadLevel,(void))
 
+Void PlayState_obj::addActor( ::Entity actor){
+{
+		HX_STACK_FRAME("PlayState","addActor",0x43c77845,"PlayState.addActor","PlayState.hx",54,0xb30d7781)
+		HX_STACK_THIS(this)
+		HX_STACK_ARG(actor,"actor")
+		HX_STACK_LINE(55)
+		::Entity tmp = actor;		HX_STACK_VAR(tmp,"tmp");
+		HX_STACK_LINE(55)
+		this->add(tmp);
+		HX_STACK_LINE(56)
+		::MapLoader tmp1 = this->loader;		HX_STACK_VAR(tmp1,"tmp1");
+		HX_STACK_LINE(56)
+		::Entity tmp2 = actor;		HX_STACK_VAR(tmp2,"tmp2");
+		HX_STACK_LINE(56)
+		tmp1->actors->add(tmp2);
+	}
+return null();
+}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(PlayState_obj,addActor,(void))
+
 
 PlayState_obj::PlayState_obj()
 {
@@ -265,6 +287,9 @@ Dynamic PlayState_obj::__Field(const ::String &inName,hx::PropertyAccess inCallP
 		if (HX_FIELD_EQ(inName,"loader") ) { return loader; }
 		if (HX_FIELD_EQ(inName,"create") ) { return create_dyn(); }
 		if (HX_FIELD_EQ(inName,"update") ) { return update_dyn(); }
+		break;
+	case 8:
+		if (HX_FIELD_EQ(inName,"addActor") ) { return addActor_dyn(); }
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"loadLevel") ) { return loadLevel_dyn(); }
@@ -304,6 +329,7 @@ static ::String sMemberFields[] = {
 	HX_HCSTRING("create","\xfc","\x66","\x0f","\x7c"),
 	HX_HCSTRING("update","\x09","\x86","\x05","\x87"),
 	HX_HCSTRING("loadLevel","\x7e","\x61","\x9a","\x8d"),
+	HX_HCSTRING("addActor","\x14","\xf1","\x03","\x95"),
 	::String(null()) };
 
 static void sMarkStatics(HX_MARK_PARAMS) {
