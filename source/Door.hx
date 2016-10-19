@@ -17,6 +17,7 @@ class Door extends Entity
 		body.allowRotation = false;
 		setBodyMaterial(0, 0, 0);
 		pixelPerfectRender = false;
+		this.physicsEnabled = false;
 		
 	}
 
