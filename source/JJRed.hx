@@ -13,7 +13,9 @@ class JJRed extends Entity{
 		animation.add("idle", [0]);
 		addTag("Alive");
 
-		createRectangularBody(16, 16);
+		//createRectangularBody(16, 16);
+		createCircularBody(9);
+		
 		body.allowRotation = false;
 		setBodyMaterial(0, 0, 0);
 		pixelPerfectRender = false;	

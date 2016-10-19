@@ -9,7 +9,8 @@ class Coin extends Entity{
 	{
 		super(X,Y,play,"Coin");
 		loadGraphic("assets/images/coin.png",true,16,16);
-		createRectangularBody(16, 16);
+		//createRectangularBody(16, 16);
+		createCircularBody(8);
 		body.allowRotation = true;
 		setBodyMaterial(0, 0, 0);
 		pixelPerfectRender = true;

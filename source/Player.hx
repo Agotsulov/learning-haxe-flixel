@@ -32,7 +32,8 @@ class Player extends Entity
 		animation.add("idle", [3]);
 		animation.add("jump", [2]);
 
-		createRectangularBody(12, 16);
+		//createRectangularBody(12, 16);
+		createCircularBody(8);
 		body.allowRotation = false;
 		setBodyMaterial(0, 0, 0);
 		pixelPerfectRender = false;

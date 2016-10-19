@@ -49,10 +49,10 @@ class MapLoader {
 		
 		//FlxNapeSpace.createWalls();
 		
-		//FlxNapeSpace.drawDebug = true;
+		FlxNapeSpace.drawDebug = true;
 		
 		var bit = Assets.getBitmapData(foldername + "m.png");
-		terrain = new Terrain(bit, 32, 8);
+		terrain = new Terrain(bit, 64, 8);
 		terrain.invalidate(new AABB(0, 0, bit.width, bit.height), play);
 		
 		
