@@ -1,10 +1,10 @@
 package;
 
+import flixel.addons.nape.FlxNapeSprite;
 import flixel.FlxSprite;
 import flixel.FlxObject;
 
-
-class Entity extends FlxSprite
+class Entity extends FlxNapeSprite
 {
 
 	public var play:PlayState;
@@ -19,8 +19,9 @@ class Entity extends FlxSprite
 		super(X,Y);
 		tags = new List<String>();
 		tags.add(name);
+
 		this.play = play;
-		this.name = tags.first();
+		if(name != "null") this.name = tags.first();
 		this.hurtCooldown = hurtCooldown;
 	}
 

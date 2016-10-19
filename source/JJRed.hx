@@ -1,9 +1,7 @@
 package;
 
-import abilites.megaJump.MegaJumpObject;
 
 class JJRed extends Entity{
-	public static inline var GRAVITY:Int = 620;
 	
 
 	public function new(X:Int, Y:Int, Play:PlayState)
@@ -13,29 +11,33 @@ class JJRed extends Entity{
 
 		animation.add("walking", [0, 1], 6, true);
 		animation.add("idle", [0]);
-		addTag("Alive");	
+		addTag("Alive");
+
+		createRectangularBody(16, 16);
+		body.allowRotation = false;
+		setBodyMaterial(0, 0, 0);
+		pixelPerfectRender = false;	
 	}
 
 
 	override public function update(elapsed:Float):Void
 	{ 
-		acceleration.y = GRAVITY;	
 	
-		if (velocity.x > 0 || velocity.x < 0) 
+		if (body.velocity.x > 0 || body.velocity.x < 0) 
 		{ 
 			animation.play("walking"); 
 		}
-		else if (velocity.x == 0) 
+		else if (body.velocity.x == 0) 
 		{ 
 			animation.play("idle"); 
 		}
 		
 		var p:Entity = play.loader.getEntity("Player");
 		if((p.x >= this.x - 32) && (p.y >= this.y - 32) && (p.x <= this.x) && (p.y <= this.y)) {
-			velocity.y = -150;
+			body.velocity.y = -150;
 		} 
 		if((p.x >= this.x) && (p.y >= this.y) && (p.x <= this.x + 32) && (p.y <= this.y + 32)) {
-			velocity.y = -150;
+			body.velocity.y = -150;
 		} 
 
 		super.update(elapsed);
@@ -47,22 +49,19 @@ class JJRed extends Entity{
 
 		if(o2.name == "Player"){
 			o2.hurt(10);
-			o2.velocity.y = -250;
+			o2.body.velocity.y = -250;
 		}
 
 		if(o1.name == "Player"){
 			o1.hurt(10);
 			
-			o2.velocity.y = -250;
+			o2.body.velocity.y = -250;
 		}
 
 	}
 
 	override public function kill():Void
 	{
-		var C:MegaJumpObject = new MegaJumpObject(cast x,cast y,play);
-		play.add(C);
-		play.loader.actors.add(C);
 		super.kill();
 	} 
 }

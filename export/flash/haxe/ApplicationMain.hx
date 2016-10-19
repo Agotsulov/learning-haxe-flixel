@@ -38,11 +38,15 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
+		urls.push ("assets/levels/map1/b.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/levels/map1/m.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/levels/map1/s.csv");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/levels/map1/b.csv");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
@@ -50,55 +54,23 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
-		urls.push ("assets/levels/map1/m.csv");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/levels/map1/tileset.png");
-		types.push (lime.Assets.AssetType.IMAGE);
-		
-		
-		urls.push ("assets/levels/map1/m.csv~");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
 		urls.push ("assets/levels/map2/a.csv");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
-		urls.push ("assets/levels/map2/d.csv~");
-		types.push (lime.Assets.AssetType.TEXT);
+		urls.push ("assets/levels/map2/b.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/levels/map2/m.png");
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/levels/map2/s.csv");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
-		urls.push ("assets/levels/map2/b.csv");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
 		urls.push ("assets/levels/map2/d.csv");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/levels/map2/m.csv");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/levels/map2/tileset.png");
-		types.push (lime.Assets.AssetType.IMAGE);
-		
-		
-		urls.push ("assets/levels/map2/a.csv~");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/levels/map2/m.csv~");
-		types.push (lime.Assets.AssetType.TEXT);
-		
-		
-		urls.push ("assets/levels/map2/b.csv~");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
@@ -118,6 +90,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/terrain.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/door.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -134,11 +110,23 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("assets/images/terrain.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("assets/images/images-go-here.txt");
 		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		urls.push ("assets/images/jjred.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/megaJump.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/images/Patagonia30.jpg");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -148,6 +136,14 @@ class ApplicationMain {
 		
 		urls.push ("assets/music/music-goes-here.txt");
 		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("assets/void.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("assets/Patagonia30.jpg");
+		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
 		urls.push ("assets/data/data-goes-here.txt");
@@ -235,11 +231,11 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "196",
+			build: "185",
 			company: "HaxeFlixel",
-			file: "Game",
+			file: "TestFlxNape",
 			fps: 60,
-			name: "Game",
+			name: "TestFlxNape",
 			orientation: "",
 			packageName: "com.example.myapp",
 			version: "0.0.1",
@@ -257,7 +253,7 @@ class ApplicationMain {
 					parameters: "{}",
 					resizable: true,
 					stencilBuffer: true,
-					title: "Game",
+					title: "TestFlxNape",
 					vsync: true,
 					width: 640,
 					x: null,

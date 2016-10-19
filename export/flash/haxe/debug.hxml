@@ -5,6 +5,12 @@
 -D openfl=3.6.1
 -cp /home/byzilio/haxelib/lime/2,9,1
 -D lime=2.9.1
+-cp /home/byzilio/haxelib/flixel-addons/2,1,0
+-D flixel-addons=2.1.0
+-cp /home/byzilio/haxelib/poly2trihx/0,1,4
+-D poly2trihx=0.1.4
+-cp /home/byzilio/haxelib/nape/2,0,20
+-D nape=2.0.20
 -cp source
 -cp /home/byzilio/haxelib/openfl/3,6,1/extern
 -D native-trace
@@ -20,7 +26,7 @@
 --macro flixel.system.macros.FlxDefines.run()
 -swf-lib export/flash/obj/assets.swf
 -swf-version 11.8
--swf export/flash/bin/Game.swf
+-swf export/flash/bin/TestFlxNape.swf
 -swf-header 640:480:60:000000
 -cp export/flash/haxe
 -debug

@@ -1,17 +1,23 @@
 package;
 
+import flixel.addons.nape.FlxNapeSpace;
+import flixel.addons.nape.FlxNapeTilemap;
 import flixel.tile.FlxTilemap;
 import flixel.group.FlxGroup;
 import flixel.FlxG;
 import flixel.FlxObject;
+import flixel.FlxSprite;
 import flixel.FlxState;
 import flixel.util.FlxColor;
 import openfl.Assets;
+import nape.geom.Vec2;
+import nape.geom.AABB;
 
 class MapLoader {
 
-	public var background:FlxTilemap;
-	public var map:FlxTilemap;
+	public var background:FlxSprite;
+	public var map:FlxSprite;
+	public var terrain:Terrain;
 
 	public var actors:FlxGroup;
 	public var player:Player;
@@ -20,33 +26,63 @@ class MapLoader {
 
 	public function new(foldername:String,play:PlayState)
 	{	
-		background = new FlxTilemap();
-		map = new FlxTilemap();
-		
+			
+
+		var w:Int = FlxG.width;
+		var h:Int = FlxG.height;
+	
 		path = foldername;
 
-		background.loadMapFromCSV(foldername + "b.csv", foldername + "tileset.png", 16, 16,OFF,1,1);
-		map.loadMapFromCSV(foldername + "m.csv", foldername + "tileset.png", 16, 16,OFF,1,1);
+		background = new FlxSprite();
+		background.loadGraphic(foldername + "b.png");
+		
+		
+		map = new FlxSprite();
+		map.loadGraphic(foldername + "m.png");
+		
+
+
+		
+		FlxNapeSpace.init();
+		
+		FlxNapeSpace.space.gravity = new Vec2(0, 600);
+		
+		//FlxNapeSpace.createWalls();
+		
+		//FlxNapeSpace.drawDebug = true;
+		
+		var bit = Assets.getBitmapData(foldername + "m.png");
+		terrain = new Terrain(bit, 32, 8);
+		terrain.invalidate(new AABB(0, 0, bit.width, bit.height), play);
+		
+		
+
 	
 		actors = new FlxGroup();
 	
 		var coords:Array<String>;
 		var entities:Array<String> = Assets.getText(foldername + "a.csv").split("\n");   
 		
+
+
+		
+
 		for (j in 0...entities.length)
 		{
 			coords = entities[j].split(","); 
 			
 			if (coords[0] == "jj"){
-				actors.add(new JJ(Std.parseInt(coords[1]),Std.parseInt(coords[2]),play));
+				//actors.add(new JJ(Std.parseInt(coords[1]),Std.parseInt(coords[2]),play));
 			}
 
 
 			if (coords[0] == "player"){
-				player = new Player(Std.parseInt(coords[1]),Std.parseInt(coords[2]),play); 
+				//player = new Player(Std.parseInt(coords[1]),Std.parseInt(coords[2]),play); 
+				//FlxG.worldBounds.set(0,0,map.widthInTiles * 16,map.heightInTiles * 16);
+				//FlxG.camera.follow(player,PLATFORMER, 1); 
+				player = new Player(Std.parseInt(coords[1]),Std.parseInt(coords[2]),play);
 				actors.add(player);
-				FlxG.worldBounds.set(0,0,map.widthInTiles * 16,map.heightInTiles * 16);
-				FlxG.camera.follow(player,PLATFORMER, 1); 
+
 			}
 
 			if (coords[0] == "coin"){
@@ -54,7 +90,7 @@ class MapLoader {
 			}
 
 			if (coords[0] == "spike"){
-				actors.add(new Spike(Std.parseInt(coords[1]),Std.parseInt(coords[2]),play));
+				//actors.add(new Spike(Std.parseInt(coords[1]),Std.parseInt(coords[2]),play));
 			}
 
 			if (coords[0] == "jjred"){
@@ -74,7 +110,6 @@ class MapLoader {
 		}		
 
 	}
-
 
 	public function getEntity(name:String):Entity
 	{

@@ -1,5 +1,6 @@
 package;
 
+import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 
@@ -12,7 +13,11 @@ class Door extends Entity
 		super(X,Y,play);
 		this.folderpath = folderpath;
 		loadGraphic("assets/images/door.png",true,16,32);
-		this.setSize(16,32);
+		createRectangularBody(16, 32);
+		body.allowRotation = false;
+		setBodyMaterial(0, 0, 0);
+		pixelPerfectRender = false;
+		
 	}
 
 	override public function collide(o1:Entity,o2:Entity):Void
@@ -20,10 +25,19 @@ class Door extends Entity
 
 		if(o1.name == "Player") 
 		{
-			play.loadLevel(folderpath);
+			//play.loadLevel(folderpath);
+			var p:PlayState = new PlayState(folderpath);
+			//p.loadLevel(folderpath);
+
+			FlxG.switchState(p);
 		} else if(o2.name == "Player") 
 		{
-			play.loadLevel(folderpath);
+			//play.loadLevel(folderpath);
+			var p:PlayState = new PlayState(folderpath);
+			//p.loadLevel(folderpath);
+			FlxG.switchState(p);
+		
+			//FlxG.switchState(new PlayState());
 		}
 	}
 }
